@@ -41,6 +41,7 @@
     "@types/node": "^20.4.8",
     "@typescript-eslint/eslint-plugin": "^6.2.1",
     "@typescript-eslint/parser": "^6.2.1",
+    "aws-sdk": "^2.1463.0",
     "eslint": "^8.46.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-base": "^15.0.0",
@@ -52,7 +53,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "husky": "^8.0.3",
     "jest": "^29.6.2",
-    "lerna": "^7.1.4",
+    "lerna": "^7.3.0",
     "lint-staged": "^13.2.3",
     "prettier": "^2.8.8",
     "puppeteer-extra-plugin-stealth": "^2.11.2",
@@ -83,5 +84,10 @@
       "pre-commit": "lint-staged && lerna run precommit --parallel --since HEAD"
     }
   },
-  "packageManager": "yarn@3.6.3"
+  "packageManager": "yarn@3.6.3",
+  "dependenciesMeta": {
+    "aws-sdk@2.965.0": {
+      "unplugged": true
+    }
+  }
 }
