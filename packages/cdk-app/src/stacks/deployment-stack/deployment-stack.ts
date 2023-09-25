@@ -13,6 +13,11 @@ class DeploymentStack extends cdk.Stack {
   constructor(scope: Construct, id: string, readonly props?: cdk.StackProps) {
     super(scope, id, props);
 
+    new Nextjs(this, 'Web', {
+      nextjsPath: path.join(require.resolve('@typescript-backend-cdk-starter/next-app'), '..'), // relative path to nextjs project root
+      buildCommand: 'yarn open:next:build',
+    });
+
     // const apiLambda = new lambda.Function(this, utils.getConstructName('api'), {
     //   functionName: utils.getConstructName('api'),
     //   description: utils.getConstructDescription('api'),
