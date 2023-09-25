@@ -2,8 +2,9 @@
   "name": "@typescript-backend-cdk-starter/next-app",
   "version": "0.1.0",
   "private": true,
+  "main": "/index.js",
   "scripts": {
-    "build": "next build",
+    "build:no": "next build",
     "dev": "next dev",
     "lint": "next lint",
     "start": "next start"

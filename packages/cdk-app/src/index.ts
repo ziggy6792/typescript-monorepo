@@ -8,6 +8,8 @@ import DeploymentStack from './stacks/deployment-stack';
 
 const app = new cdk.App();
 
+console.log(require.resolve('@typescript-backend-cdk-starter/next-app'));
+
 const stack = new DeploymentStack(app, `typescript-backend-cdk-starter`, {
   env: {
     account: config.AWS_ACCOUNT_ID,
