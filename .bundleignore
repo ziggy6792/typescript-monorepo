@@ -1,0 +1,11 @@
+**/bundle.zip
+**/bundle.zip.*
+**/bundle.zip*
+**/bundle
+.yarn/sdks
+**/plugins
+bash
+backups
+**/src
+.vscode
+.idea
