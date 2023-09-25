@@ -3,15 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "sst bind next dev",
     "build": "next build",
+    "deploy": "sst deploy",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
     "@types/uuid": "^9.0.2",
+    "@typescript-backend-cdk-starter/next-app": "workspace:^",
     "aws-cdk-lib": "2.84.0",
+    "aws-sdk": "^2.1463.0",
     "constructs": "10.1.156",
     "sst": "^2.22.6"
+  },
+  "devDependencies": {
+    "webpack-cli": "3"
   }
 }

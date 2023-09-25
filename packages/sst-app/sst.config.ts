@@ -1,6 +1,6 @@
 /* eslint-disable prefer-arrow-callback */
 import { SSTConfig } from 'sst';
-import { NextjsSite, Table, use } from 'sst/constructs';
+import { NextjsSite } from 'sst/constructs';
 
 export default {
   config(_input) {
@@ -11,7 +11,9 @@ export default {
   },
   stacks(app) {
     app.stack(function Site({ stack }) {
-      const site = new NextjsSite(stack, 'site', {});
+      const site = new NextjsSite(stack, 'site', {
+        path: '../next-app',
+      });
 
       stack.addOutputs({
         SiteUrl: site.url,
