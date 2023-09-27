@@ -96,7 +96,8 @@ web_modules/
 .yarn-integrity
 
 # dotenv environment variables file
-.env
+# ToDo: unstage this
+# .env
 .env.test
 
 # parcel-bundler cache (https://parceljs.org/)
