@@ -7,7 +7,7 @@
     "open:next:build": "npx --yes open-next@2 build",
     "dev": "next dev",
     "lint": "next lint",
-    "start": "next start"
+    "start:next": "next start"
   },
   "dependencies": {
     "@t3-oss/env-nextjs": "^0.6.0",
