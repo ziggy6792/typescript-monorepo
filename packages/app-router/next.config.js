@@ -2,19 +2,18 @@
 const nextConfig = {
   poweredByHeader: false,
 
-  output: "standalone",
-  outputFileTracing: "../sst",
+  output: 'standalone',
   experimental: {
     serverActions: true,
   },
   headers() {
     return [
       {
-        source: "/(.*)",
+        source: '/(.*)',
         headers: [
           {
-            key: "e2e-headers",
-            value: "next.config.js",
+            key: 'e2e-headers',
+            value: 'next.config.js',
           },
         ],
       },
