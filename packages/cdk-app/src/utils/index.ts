@@ -1,4 +1,4 @@
-export const PROJECT_NAME = 'typescript-journey';
+export const PROJECT_NAME = 'tj-nm';
 
 const conSep = '-';
 
