@@ -8,7 +8,7 @@ import '~/styles/globals.css';
 
 const MyApp: AppType<{ session: Session | null }> = ({ Component, pageProps: { session, ...pageProps } }) => {
   return (
-    <SessionProvider session={session} baseUrl={'https://d6a0cy1yd1rjc.cloudfront.net/'}>
+    <SessionProvider session={session} baseUrl={process.env.NEXT_PUBLIC_NEXTAUTH_URL}>
       <Component {...pageProps} />
     </SessionProvider>
   );
