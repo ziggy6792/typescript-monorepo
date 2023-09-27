@@ -1,4 +1,4 @@
-const PROJECT_NAME = 'typescript-backend-cdk-starter';
+export const PROJECT_NAME = 'typescript-journey';
 
 const conSep = '-';
 
