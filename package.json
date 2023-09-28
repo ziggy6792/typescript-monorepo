@@ -21,6 +21,7 @@
     "pre:deploy": "lerna run pre:deploy --concurrency 1",
     "cdk:synth": "lerna run synth --scope @typescript-backend-cdk-starter/cdk-app && rm -rf cdk.out && cp -r packages/cdk-app/cdk.out cdk.out",
     "cdk:deploy": "lerna run deploy --stream --scope @typescript-backend-cdk-starter/cdk-app",
+    "sst:deploy": "lerna run deploy --stream --scope @typescript-backend-cdk-starter/sst-app",
     "cdk:deploy:demo": "lerna run deploy:demo --stream --scope @typescript-backend-cdk-starter/cdk-app",
     "stop": "kill-port 3000",
     "lint": "yarn eslint './{utils,packages}/**/src/**/*.ts'"

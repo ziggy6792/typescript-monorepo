@@ -6034,9 +6034,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@typescript-backend-cdk-starter/sst-app@workspace:packages/sst":
+"@typescript-backend-cdk-starter/sst-app@workspace:packages/sst-app":
   version: 0.0.0-use.local
-  resolution: "@typescript-backend-cdk-starter/sst-app@workspace:packages/sst"
+  resolution: "@typescript-backend-cdk-starter/sst-app@workspace:packages/sst-app"
   dependencies:
     aws-cdk-lib: 2.91.0
     constructs: 10.2.69
