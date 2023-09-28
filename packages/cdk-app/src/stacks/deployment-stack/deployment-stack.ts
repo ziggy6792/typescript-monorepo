@@ -16,7 +16,11 @@ class DeploymentStack extends cdk.Stack {
     const nextapp = new Nextjs(this, utils.getConstructId('next-app'), {
       nextjsPath: path.join(require.resolve('@typescript-backend-cdk-starter/next-app'), '..'), // relative path to nextjs project root
       buildCommand: 'yarn open:next:build',
+      // ToDo : add cognito auth env
     });
+
+    // Or add to SSM and get cognito configs from there at runtime
+    // nextapp.serverFunction.lambdaFunction.role.
 
     new cdk.CfnOutput(this, utils.getConstructId('next-app-url'), {
       value: nextapp.url,

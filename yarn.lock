@@ -4639,6 +4639,7 @@ __metadata:
     "@types/react": ^18.2.20
     "@types/react-dom": ^18.2.7
     "@types/semver": ^7
+    "@typescript-backend-cdk-starter/common": "workspace:^"
     "@typescript-eslint/eslint-plugin": ^6.3.0
     "@typescript-eslint/parser": ^6.3.0
     detect-libc: ^2.0.2
