@@ -97,7 +97,7 @@ web_modules/
 
 # dotenv environment variables file
 # ToDo: unstage this
-.env
+# .env
 .env.test
 
 # parcel-bundler cache (https://parceljs.org/)
