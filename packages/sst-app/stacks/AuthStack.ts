@@ -1,4 +1,3 @@
-import { OAuthScope } from 'aws-cdk-lib/aws-cognito';
 import { Cognito, StackContext } from 'sst/constructs';
 
 export function AuthStack({ stack, app }: StackContext) {
@@ -10,10 +9,8 @@ export function AuthStack({ stack, app }: StackContext) {
       userPoolClient: {
         generateSecret: true,
         oAuth: {
-          flows: { authorizationCodeGrant: true },
           callbackUrls,
           logoutUrls,
-          scopes: [OAuthScope.EMAIL, OAuthScope.PROFILE],
         },
       },
     },
