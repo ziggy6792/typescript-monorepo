@@ -2,7 +2,7 @@ import path from 'path';
 import { NextjsSite, StackContext, use } from 'sst/constructs';
 import { AuthStack } from './AuthStack';
 
-export function NextApp({ stack }: StackContext): void {
+export function NextApp({ stack }: StackContext) {
   // Create auth provider
   const { auth } = use(AuthStack);
 
@@ -19,7 +19,7 @@ export function NextApp({ stack }: StackContext): void {
     environment: {
       COGNITO_CLIENT_ID: userPoolClientId,
       COGNITO_CLIENT_SECRET: userPoolClientSecret.toString(),
-      COGNITO_ISSUER: `https://cognito-idp.ap-southeast-1.amazonaws.com/${userPoolClientId}`,
+      COGNITO_ISSUER: `https://cognito-idp.ap-southeast-1.amazonaws.com/${auth.userPoolId}`,
     },
   });
 
