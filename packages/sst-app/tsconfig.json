@@ -4,7 +4,6 @@
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": false,
     "moduleResolution": "node",
-    "module": "NodeNext",
     "preserveWatchOutput": true,
     "skipLibCheck": true,
     "noEmit": true,

@@ -6038,6 +6038,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@typescript-backend-cdk-starter/sst-app@workspace:packages/sst-app"
   dependencies:
+    "@typescript-backend-cdk-starter/next-app": "workspace:^"
     aws-cdk-lib: 2.91.0
     constructs: 10.2.69
     sst: 2.24.20
