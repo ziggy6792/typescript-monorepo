@@ -21,6 +21,7 @@
     "pre:deploy": "lerna run pre:deploy --concurrency 1",
     "cdk:synth": "lerna run synth --scope @typescript-backend-cdk-starter/cdk-app && rm -rf cdk.out && cp -r packages/cdk-app/cdk.out cdk.out",
     "cdk:deploy": "lerna run deploy --stream --scope @typescript-backend-cdk-starter/cdk-app",
+    "sst:deploy": "lerna run deploy --stream --scope @typescript-backend-cdk-starter/sst-app",
     "cdk:deploy:demo": "lerna run deploy:demo --stream --scope @typescript-backend-cdk-starter/cdk-app",
     "stop": "kill-port 3000",
     "lint": "yarn eslint './{utils,packages}/**/src/**/*.ts'"
@@ -41,7 +42,7 @@
     "@types/node": "^20.4.8",
     "@typescript-eslint/eslint-plugin": "^6.2.1",
     "@typescript-eslint/parser": "^6.2.1",
-    "aws-sdk": "^2.1463.0",
+    "aws-sdk": "^2.1466.0",
     "eslint": "^8.46.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-base": "^15.0.0",
@@ -65,9 +66,6 @@
     "ttypescript": "^1.5.15",
     "typescript": "^4.9.5",
     "typescript-transform-paths": "^3.4.6"
-  },
-  "resolutions": {
-    "aws-sdk": "2.965.0"
   },
   "lint-staged": {
     "{packages,utils}/*/src/**/*.{ts,tsx}": [

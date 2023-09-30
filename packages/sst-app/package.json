@@ -1,0 +1,15 @@
+{
+  "name": "@typescript-backend-cdk-starter/sst-app",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "deploy": "sst deploy"
+  },
+  "dependencies": {
+    "@typescript-backend-cdk-starter/next-app": "workspace:^",
+    "aws-cdk-lib": "2.91.0",
+    "constructs": "10.2.69",
+    "sst": "2.24.20"
+  }
+}

@@ -2,13 +2,12 @@
   "name": "@typescript-backend-cdk-starter/next-app",
   "version": "0.1.0",
   "private": true,
-  "main": "/index.js",
   "scripts": {
     "build": "next build",
     "open:next:build": "npx --yes open-next@2 build",
     "dev": "next dev",
     "lint": "next lint",
-    "start": "next start"
+    "start:next": "next start"
   },
   "dependencies": {
     "@t3-oss/env-nextjs": "^0.6.0",
@@ -17,6 +16,7 @@
     "@trpc/next": "^10.37.1",
     "@trpc/react-query": "^10.37.1",
     "@trpc/server": "^10.37.1",
+    "@typescript-backend-cdk-starter/common": "workspace:^",
     "detect-libc": "^2.0.2",
     "expand-template": "^2.0.3",
     "github-from-package": "^0.0.0",
@@ -54,6 +54,5 @@
   },
   "ct3aMetadata": {
     "initVersion": "7.20.2"
-  },
-  "packageManager": "yarn@3.6.3"
+  }
 }
