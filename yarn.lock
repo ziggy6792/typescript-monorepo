@@ -141,6 +141,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@aws-cdk/asset-node-proxy-agent-v6@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "@aws-cdk/asset-node-proxy-agent-v6@npm:2.0.1"
+  checksum: 5d011a554e71212662e32ff5d9187a1733a07d5424bdedfef2f43e7a6075d4b5f316d696867cc5dcd9ed1a11731b0d6b3ae41872c454796c326983ab382e05d0
+  languageName: node
+  linkType: hard
+
 "@aws-cdk/aws-apigatewayv2-alpha@npm:^2.91.0-alpha.0":
   version: 2.91.0-alpha.0
   resolution: "@aws-cdk/aws-apigatewayv2-alpha@npm:2.91.0-alpha.0"
@@ -5907,12 +5914,12 @@ __metadata:
     "@types/semver": ^7
     "@typescript-backend-cdk-starter/api": 0.0.1
     "@typescript-backend-cdk-starter/next-app": "workspace:^"
-    aws-cdk: 2.90.0
-    aws-cdk-lib: ^2.90.0
+    aws-cdk: 2.99.1
+    aws-cdk-lib: ^2.99.1
     aws-cdk-local: ^2.18.0
     aws-sdk: ^2.1430.0
     cdk-nextjs-standalone: ^4.0.0-beta.1
-    constructs: ^10.2.69
+    constructs: ^10.2.70
     detect-libc: ^2.0.2
     esbuild: 0.17.16
     expand-template: ^2.0.3
@@ -5929,7 +5936,6 @@ __metadata:
     rc: ^1.2.8
     semver: ^7.5.4
     simple-get: ^4.0.1
-    src: "link:./src"
     tar-fs: ^3.0.4
     ts-node: ^10.9.1
     tsconfig-paths: ^4.2.0
@@ -5950,7 +5956,6 @@ __metadata:
     jest: ^27.4.5
     json-beautify: ^1.1.1
     npm-run-all: ^4.1.5
-    src: "link:./src"
     ts-jest: ^27.1.1
     ts-node: ^10.4.0
     tsconfig-paths: ^3.11.0
@@ -5979,7 +5984,6 @@ __metadata:
     mongo-gui: ^0.0.18
     npm-run-all: ^4.1.5
     source-map-support: ^0.5.21
-    src: "link:./src"
     ts-node-dev: ^2.0.0
     tsconfig-paths: ^4.2.0
     tslib: ^2.6.1
@@ -6039,8 +6043,8 @@ __metadata:
   resolution: "@typescript-backend-cdk-starter/sst-app@workspace:packages/sst-app"
   dependencies:
     "@typescript-backend-cdk-starter/next-app": "workspace:^"
-    aws-cdk-lib: 2.91.0
-    constructs: 10.2.69
+    aws-cdk-lib: 2.99.1
+    constructs: 10.2.70
     sst: 2.24.20
   languageName: unknown
   linkType: soft
@@ -7231,13 +7235,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"aws-cdk-lib@npm:^2.90.0":
-  version: 2.90.0
-  resolution: "aws-cdk-lib@npm:2.90.0"
+"aws-cdk-lib@npm:2.99.1, aws-cdk-lib@npm:^2.99.1":
+  version: 2.99.1
+  resolution: "aws-cdk-lib@npm:2.99.1"
   dependencies:
     "@aws-cdk/asset-awscli-v1": ^2.2.200
     "@aws-cdk/asset-kubectl-v20": ^2.1.2
-    "@aws-cdk/asset-node-proxy-agent-v5": ^2.0.166
+    "@aws-cdk/asset-node-proxy-agent-v6": ^2.0.1
     "@balena/dockerignore": ^1.0.2
     case: 1.6.3
     fs-extra: ^11.1.1
@@ -7250,7 +7254,7 @@ __metadata:
     yaml: 1.10.2
   peerDependencies:
     constructs: ^10.0.0
-  checksum: 1456c62e5961908a034a0c4fca7f1daa7ccf6e3d9279927a896db2bd5c79a78d4ffb3f04267c9b6d61b361031b76763f735aa4fc106163b5c85ba570fff5179c
+  checksum: ed351f197fddd388d7298ff1ccf741dec998c62352ace2728867f59c09bfc828f6aadb86adaa44a1bf4873d7fe47c25f23e83848eb849a5fa76587efabc6426f
   languageName: node
   linkType: hard
 
@@ -7265,9 +7269,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"aws-cdk@npm:2.90.0":
-  version: 2.90.0
-  resolution: "aws-cdk@npm:2.90.0"
+"aws-cdk@npm:2.99.1":
+  version: 2.99.1
+  resolution: "aws-cdk@npm:2.99.1"
   dependencies:
     fsevents: 2.3.2
   dependenciesMeta:
@@ -7275,7 +7279,7 @@ __metadata:
       optional: true
   bin:
     cdk: bin/cdk
-  checksum: dbcafebcef306d047db003feb0decc73e35ea9f0cee66444f8c01d65385c759154bbd67de03c2a06e0ef64b95a4e058ec978ef3691c922cbf9aef4b4d03d90c2
+  checksum: 339d8bf4dded682b57b41ffb9c8b458e807d3c1cacc63c70edb74c1197c72cd4ddb41012f847449996b88a544d9157052c6f8fc2b3636170492d20efc1f1c9d3
   languageName: node
   linkType: hard
 
@@ -8617,10 +8621,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"constructs@npm:10.2.69, constructs@npm:^10.2.69":
+"constructs@npm:10.2.69":
   version: 10.2.69
   resolution: "constructs@npm:10.2.69"
   checksum: 8e72083abf8cc860abace9fd2a551a5eef30dc130cb5fabff30614329e977771e8e7a0bfd7a26784de42ae0a1904ffe4f16f765994a2f948b94787927da09436
+  languageName: node
+  linkType: hard
+
+"constructs@npm:10.2.70, constructs@npm:^10.2.70":
+  version: 10.2.70
+  resolution: "constructs@npm:10.2.70"
+  checksum: 8649ed2c95cb0107d389249285229a2d6594cd36a24af2c106b25630cc4f649c2e628f237ce8da1f26454742ed23cc7f1fcfeab9c3a6592180a48848aa5bf82d
   languageName: node
   linkType: hard
 
@@ -18718,24 +18729,6 @@ __metadata:
   checksum: 19d79aec211f09b99ec3099b5b2ae2f6e9cdefe50bc91ac4c69144b6d3928a640bb6ae5b3def70c2e85a2c3d9f5ec2719921e3a59d3ca3ef4b2fd1a4656a0df3
   languageName: node
   linkType: hard
-
-"src@link:./src::locator=%40typescript-backend-cdk-starter%2Fcdk-app%40workspace%3Apackages%2Fcdk-app":
-  version: 0.0.0-use.local
-  resolution: "src@link:./src::locator=%40typescript-backend-cdk-starter%2Fcdk-app%40workspace%3Apackages%2Fcdk-app"
-  languageName: node
-  linkType: soft
-
-"src@link:./src::locator=%40typescript-backend-cdk-starter%2Fcommon%40workspace%3Apackages%2Fcommon":
-  version: 0.0.0-use.local
-  resolution: "src@link:./src::locator=%40typescript-backend-cdk-starter%2Fcommon%40workspace%3Apackages%2Fcommon"
-  languageName: node
-  linkType: soft
-
-"src@link:./src::locator=%40typescript-backend-cdk-starter%2Flocal-lambda-server%40workspace%3Autils%2Flocal-lambda-server":
-  version: 0.0.0-use.local
-  resolution: "src@link:./src::locator=%40typescript-backend-cdk-starter%2Flocal-lambda-server%40workspace%3Autils%2Flocal-lambda-server"
-  languageName: node
-  linkType: soft
 
 "ssri@npm:^10.0.0, ssri@npm:^10.0.1":
   version: 10.0.4

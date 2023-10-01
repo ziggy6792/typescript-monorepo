@@ -28,21 +28,49 @@ class DeploymentStack extends cdk.Stack {
     //   exportName: utils.getConstructName('next-app-url'),
     // });
 
-    const apiLambda = new lambda.Function(this, utils.getConstructName('api'), {
-      functionName: utils.getConstructName('api'),
-      description: utils.getConstructDescription('api'),
+    const functionName = 'lambda-api';
+
+    const stageName = 'dev';
+
+    console.log('ARGS!', {
+      functionName: utils.getConstructName(functionName, stageName),
+      description: utils.getConstructName(functionName, stageName),
       memorySize: 256,
       timeout: cdk.Duration.seconds(30),
       runtime: lambda.Runtime.FROM_IMAGE,
       handler: lambda.Handler.FROM_IMAGE,
       code: lambda.Code.fromDockerBuild(process.env.PROJECT_CWD),
-      // code: lambda.Code.fromDockerBuild(path.join(require.resolve('@typescript-backend-cdk-starter/api'), '../..'),),
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    });
+
+    const apiLambda = new lambda.Function(this, utils.getConstructId(functionName), {
+      functionName: utils.getConstructName(functionName, stageName),
+      description: utils.getConstructName(functionName, stageName),
+      memorySize: 256,
+      timeout: cdk.Duration.seconds(30),
+      runtime: lambda.Runtime.NODEJS_18_X,
+      handler: 'packages/lambda-api/dist/index.handler',
+      code: lambda.Code.fromDockerBuild(process.env.PROJECT_CWD),
+
+      // runtime: lambda.Runtime.FROM_IMAGE,
+      // handler: lambda.Handler.FROM_IMAGE,
+      // code: lambda.Code.fromAssetImage(process.env.PROJECT_CWD),
     });
 
     new apiGateway.LambdaRestApi(this, utils.getConstructName('endpoint'), {
       handler: apiLambda,
     });
+
+    // const apiLambda = new lambda.Function(this, utils.getConstructName('api'), {
+    //   functionName: utils.getConstructName('api'),
+    //   description: utils.getConstructDescription('api'),
+    //   memorySize: 256,
+    //   timeout: cdk.Duration.seconds(30),
+    //   runtime: lambda.Runtime.FROM_IMAGE,
+    //   handler: lambda.Handler.FROM_IMAGE,
+    //   code: lambda.Code.fromDockerBuild(process.env.PROJECT_CWD),
+    //   // code: lambda.Code.fromDockerBuild(path.join(require.resolve('@typescript-backend-cdk-starter/api'), '../..'),),
+    //   // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    // });
   }
 }
 
