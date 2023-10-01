@@ -3,9 +3,7 @@ FROM public.ecr.aws/lambda/nodejs:18
 
 ARG awsExportsFile
 
-WORKDIR /asset
-
-COPY . /asset
+COPY . ./
 
 ENV NODE_ENV production
 

@@ -7,7 +7,7 @@ import * as utils from 'src/utils';
 import { Construct } from 'constructs';
 import { Nextjs } from 'cdk-nextjs-standalone';
 
-import { aws_lambda as lambda, aws_apigateway as apiGateway } from 'aws-cdk-lib';
+import { aws_lambda as lambda, aws_apigateway as apiGateway, aws_ecr as ecr } from 'aws-cdk-lib';
 
 class DeploymentStack extends cdk.Stack {
   constructor(scope: Construct, id: string, readonly props?: cdk.StackProps) {
@@ -28,35 +28,28 @@ class DeploymentStack extends cdk.Stack {
     //   exportName: utils.getConstructName('next-app-url'),
     // });
 
-    const functionName = 'lambda-api';
+    const functionName = 'lambda-api-2';
 
     const stageName = 'dev';
 
-    console.log('ARGS!', {
-      functionName: utils.getConstructName(functionName, stageName),
-      description: utils.getConstructName(functionName, stageName),
-      memorySize: 256,
-      timeout: cdk.Duration.seconds(30),
-      runtime: lambda.Runtime.FROM_IMAGE,
-      handler: lambda.Handler.FROM_IMAGE,
-      code: lambda.Code.fromDockerBuild(process.env.PROJECT_CWD),
-    });
+    const repository = ecr.Repository.fromRepositoryName(this, utils.getConstructId('repository', stageName), 'lambda-node');
 
     const apiLambda = new lambda.Function(this, utils.getConstructId(functionName), {
       functionName: utils.getConstructName(functionName, stageName),
       description: utils.getConstructName(functionName, stageName),
       memorySize: 256,
       timeout: cdk.Duration.seconds(30),
-      runtime: lambda.Runtime.NODEJS_18_X,
-      handler: 'packages/lambda-api/dist/index.handler',
-      code: lambda.Code.fromDockerBuild(process.env.PROJECT_CWD),
+      runtime: lambda.Runtime.FROM_IMAGE,
+      handler: lambda.Handler.FROM_IMAGE,
+      // code: lambda.Code.fromAssetImage(process.env.PROJECT_CWD),
+      code: lambda.Code.fromEcrImage(repository),
 
       // runtime: lambda.Runtime.FROM_IMAGE,
       // handler: lambda.Handler.FROM_IMAGE,
       // code: lambda.Code.fromAssetImage(process.env.PROJECT_CWD),
     });
 
-    new apiGateway.LambdaRestApi(this, utils.getConstructName('endpoint'), {
+    new apiGateway.LambdaRestApi(this, utils.getConstructName('endpoint-2'), {
       handler: apiLambda,
     });
 
