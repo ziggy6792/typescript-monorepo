@@ -3,6 +3,7 @@
 import { SSTConfig } from 'sst';
 import { ApiStak } from './stacks/ApiStack';
 import { AuthStack } from './stacks/AuthStack';
+import { CdkApiStack } from './stacks/CdkApiStack';
 
 import { NextApp } from './stacks/NextApp';
 
@@ -16,6 +17,6 @@ export default {
   },
   stacks(app) {
     // app.stack(AuthStack).stack(NextApp);
-    app.stack(ApiStak);
+    app.stack(CdkApiStack);
   },
 } satisfies SSTConfig;
