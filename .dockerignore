@@ -1,0 +1,16 @@
+**/node_modules
+
+**/.open-next
+
+**/.sst
+
+**/.DS_Store
+
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+.yarn/yarn.build.json
+
+!./node_modules/.yarn-state.yml

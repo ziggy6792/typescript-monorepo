@@ -33,9 +33,11 @@ class DeploymentStack extends cdk.Stack {
       description: utils.getConstructDescription('api'),
       memorySize: 256,
       timeout: cdk.Duration.seconds(30),
-      runtime: lambda.Runtime.NODEJS_16_X,
-      handler: 'bundle/entrypoint.default.handler',
-      code: lambda.Code.fromAsset(path.join(require.resolve('@typescript-backend-cdk-starter/api'), '../../bundle.zip')),
+      runtime: lambda.Runtime.FROM_IMAGE,
+      handler: lambda.Handler.FROM_IMAGE,
+      code: lambda.Code.fromDockerBuild(process.env.PROJECT_CWD),
+      // code: lambda.Code.fromDockerBuild(path.join(require.resolve('@typescript-backend-cdk-starter/api'), '../..'),),
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
     });
 
     new apiGateway.LambdaRestApi(this, utils.getConstructName('endpoint'), {
