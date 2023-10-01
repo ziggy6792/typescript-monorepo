@@ -21,6 +21,7 @@ module.exports = {
 
   rules: {
     'no-underscore-dangle': 'off',
+    'no-restricted-exports': 'off',
     'class-methods-use-this': 'off',
     'import/prefer-default-export': 'off',
     'no-unused-vars': 'off',

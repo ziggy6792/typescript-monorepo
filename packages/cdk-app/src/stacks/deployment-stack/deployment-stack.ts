@@ -13,34 +13,34 @@ class DeploymentStack extends cdk.Stack {
   constructor(scope: Construct, id: string, readonly props?: cdk.StackProps) {
     super(scope, id, props);
 
-    const nextapp = new Nextjs(this, utils.getConstructId('next-app'), {
-      nextjsPath: path.join(require.resolve('@typescript-backend-cdk-starter/next-app'), '..'), // relative path to nextjs project root
-      buildCommand: 'yarn open:next:build',
-      // ToDo : add cognito auth env
-    });
-
-    // Or add to SSM and get cognito configs from there at runtime
-    // nextapp.serverFunction.lambdaFunction.role.
-
-    new cdk.CfnOutput(this, utils.getConstructId('next-app-url'), {
-      value: nextapp.url,
-      description: 'The URL of the Next.js application',
-      exportName: utils.getConstructName('next-app-url'),
-    });
-
-    // const apiLambda = new lambda.Function(this, utils.getConstructName('api'), {
-    //   functionName: utils.getConstructName('api'),
-    //   description: utils.getConstructDescription('api'),
-    //   memorySize: 256,
-    //   timeout: cdk.Duration.seconds(30),
-    //   runtime: lambda.Runtime.NODEJS_16_X,
-    //   handler: 'bundle/entrypoint.default.handler',
-    //   code: lambda.Code.fromAsset(path.join(require.resolve('@typescript-backend-cdk-starter/api'), '../../bundle.zip')),
+    // const nextapp = new Nextjs(this, utils.getConstructId('next-app'), {
+    //   nextjsPath: path.join(require.resolve('@typescript-backend-cdk-starter/next-app'), '..'), // relative path to nextjs project root
+    //   buildCommand: 'yarn open:next:build',
+    //   // ToDo : add cognito auth env
     // });
 
-    // new apiGateway.LambdaRestApi(this, utils.getConstructName('endpoint'), {
-    //   handler: apiLambda,
+    // // Or add to SSM and get cognito configs from there at runtime
+    // // nextapp.serverFunction.lambdaFunction.role.
+
+    // new cdk.CfnOutput(this, utils.getConstructId('next-app-url'), {
+    //   value: nextapp.url,
+    //   description: 'The URL of the Next.js application',
+    //   exportName: utils.getConstructName('next-app-url'),
     // });
+
+    const apiLambda = new lambda.Function(this, utils.getConstructName('api'), {
+      functionName: utils.getConstructName('api'),
+      description: utils.getConstructDescription('api'),
+      memorySize: 256,
+      timeout: cdk.Duration.seconds(30),
+      runtime: lambda.Runtime.NODEJS_16_X,
+      handler: 'bundle/entrypoint.default.handler',
+      code: lambda.Code.fromAsset(path.join(require.resolve('@typescript-backend-cdk-starter/api'), '../../bundle.zip')),
+    });
+
+    new apiGateway.LambdaRestApi(this, utils.getConstructName('endpoint'), {
+      handler: apiLambda,
+    });
   }
 }
 
