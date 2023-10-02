@@ -2,7 +2,7 @@
 /* eslint-disable max-len */
 /* eslint-disable import/no-extraneous-dependencies */
 
-import { getNestApp } from '@typescript-backend-cdk-starter/api';
+import { getNestApp } from '@ts-monorepo/api';
 
 const buildLocalServer = async () => {
   const app = await getNestApp();
