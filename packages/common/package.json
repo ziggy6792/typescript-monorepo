@@ -6,13 +6,11 @@
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
-    "start": "ttsc -w",
-    "start:ts": "ttsc",
+    "dev": "ttsc -w",
     "build": "ttsc",
     "clean:light": "rm -rf ./dist && rm -rf ./tsconfig.build.tsbuildinfo",
     "clean:full": "yarn run clean:light && rm -rf ./node_modules",
-    "typecheck": "tsc --noEmit",
-    "precommit": "yarn run typecheck"
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "aws-sdk": "2.965.0",

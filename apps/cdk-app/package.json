@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "start": "tsc -w",
+    "dev": "tsc -w",
     "synth": "cdk synth",
     "test": "jest",
     "cdk": "cdk",
@@ -16,8 +16,7 @@
     "deploy": "cdk deploy --require-approval never",
     "clean:light": "rm -rf ./dist && rm -rf tsconfig.build.tsbuildinfo",
     "clean:full": "yarn run clean:light && rm -rf ./node_modules && rm -rf ./cdk.out",
-    "typecheck": "tsc --noEmit",
-    "precommit": "yarn run typecheck"
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@aws-solutions-constructs/core": "^2.41.0",

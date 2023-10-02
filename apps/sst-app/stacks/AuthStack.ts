@@ -1,4 +1,5 @@
 import { Cognito, StackContext } from 'sst/constructs';
+import { getConstructName } from '../utils/utility';
 
 export function AuthStack({ stack, app }: StackContext) {
   const callbackUrls = ['http://localhost:3000/api/auth/callback/cognito'];
@@ -18,7 +19,7 @@ export function AuthStack({ stack, app }: StackContext) {
 
   auth.cdk.userPool.addDomain('CognitoDomain', {
     cognitoDomain: {
-      domainPrefix: app.name,
+      domainPrefix: getConstructName('domain', app),
     },
   });
 

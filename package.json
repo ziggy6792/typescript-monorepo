@@ -2,15 +2,16 @@
   "private": true,
   "name": "ts-monorepo",
   "scripts": {
-    "build": "turbo run build",
     "dev": "turbo run dev",
+    "build": "turbo run build",
+    "deploy": "turbo run deploy --filter @ts-monorepo/sst-app",
+    "build:deploy": "run-s build deploy",
     "lint": "turbo run lint",
     "typecheck": "turbo run typecheck",
     "validate": "turbo run validate",
     "validate:check": "turbo run validate:check",
     "test": "turbo run test",
-    "test:coverage": "turbo run test:coverage",
-    "sst:deploy": "turbo run deploy --filter @ts-monorepo/sst-app"
+    "test:coverage": "turbo run test:coverage"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.7.1",
@@ -27,6 +28,7 @@
     "husky": "^8.0.0",
     "jest": "^29.6.2",
     "lint-staged": "^13.2.3",
+    "npm-run-all": "^4.1.5",
     "prettier": "^3.0.3",
     "ts-jest": "^29.1.1",
     "ts-node": "^10.9.1",
