@@ -10,7 +10,7 @@ import { NextApp } from './stacks/NextApp';
 export default {
   config(_input) {
     return {
-      name: 'tm-sst',
+      name: 'tj-sst',
       region: 'ap-southeast-1',
       stage: 'dev',
     };
