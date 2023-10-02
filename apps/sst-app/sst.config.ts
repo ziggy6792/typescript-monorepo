@@ -17,7 +17,7 @@ export default {
     };
   },
   stacks(app) {
-    // app.stack(AuthStack).stack(NextApp);
-    app.stack(CdkApiStack);
+    app.stack(AuthStack).stack(NextApp);
+    // app.stack(CdkApiStack);
   },
 } satisfies SSTConfig;
