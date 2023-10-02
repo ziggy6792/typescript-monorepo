@@ -1,4 +1,6 @@
-*
+./**/*.*
+./**/node_modules
+./node_modules
 !./yarn.lock
 !./.yarnrc.yml
 !./.yarn/releases/**
@@ -7,9 +9,6 @@
 !./.npmrc
 !./package.json
 !./node_modules/.yarn-state.yml
-!./packages/lambda-api/package.json
-!./packages/lambda-api/dist/**
-!./packages/lambda-api/build/**
-!./packages/common/package.json
-!./packages/common/dist/**
-!./packages/common/build/**
+!/packages/*/package.json
+!/packages/*/dist/**
+!/packages/*/build/**
