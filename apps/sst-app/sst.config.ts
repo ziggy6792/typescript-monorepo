@@ -10,13 +10,13 @@ import { NextApp } from './stacks/NextApp';
 export default {
   config(_input) {
     return {
-      name: 'tj-sst',
+      name: 'tm-sst',
       region: 'ap-southeast-1',
       stage: 'dev',
     };
   },
   stacks(app) {
-    // app.stack(AuthStack).stack(NextApp);
-    app.stack(CdkApiStack);
+    app.stack(AuthStack).stack(NextApp);
+    // app.stack(CdkApiStack);
   },
 } satisfies SSTConfig;

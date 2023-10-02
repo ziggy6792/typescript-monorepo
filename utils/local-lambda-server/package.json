@@ -5,11 +5,8 @@
   "main": "dist/index.js",
   "license": "Apache-2.0",
   "scripts": {
-    "start": "sleep 5 && ts-node-dev -r tsconfig-paths/register src/index.ts --rs --watch ../../.env --respawn src/index.ts ",
-    "force:stop": "echo forcestop $ kill $(lsof -i:3100 | grep node | cut -d' ' -f2- )",
-    "start:mongo:db": "docker-compose up > /dev/null",
-    "start:mongo:db:inline": "docker-compose up -d > /dev/null && yarn wait-port 27016",
-    "start:mongo:ui": "mongo-gui -u mongodb://localhost:27016/"
+    "dev": "sleep 5 && ts-node-dev -r tsconfig-paths/register src/index.ts --rs --watch ../../.env --respawn src/index.ts ",
+    "force:stop": "echo forcestop $ kill $(lsof -i:3100 | grep node | cut -d' ' -f2- )"
   },
   "dependencies": {
     "@ts-monorepo/api": "0.0.1",
