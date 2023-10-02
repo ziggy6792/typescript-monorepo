@@ -4,11 +4,15 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "deploy": "sst deploy --profile AWSAdministratorAccess-335003956095"
+    "deploy": "sst deploy --profile AWSAdministratorAccess-335003956095",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix"
   },
   "dependencies": {
     "aws-cdk-lib": "2.91.0",
     "constructs": "10.2.69",
     "sst": "2.24.20"
+  },
+  "devDependencies": {
+    "eslint": "^8.46.0"
   }
 }

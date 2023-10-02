@@ -7,6 +7,8 @@ import { CdkApiStack } from './stacks/CdkApiStack';
 
 import { NextApp } from './stacks/NextApp';
 
+const _bla = 1;
+
 export default {
   config(_input) {
     return {
