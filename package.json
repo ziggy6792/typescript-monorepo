@@ -28,7 +28,8 @@
   "packageManager": "yarn@3.6.3",
   "workspaces": [
     "apps/*",
-    "packages/*"
+    "packages/*",
+    "utils/*"
   ],
   "dependencies": {
     "typescript": "^5.2.2"

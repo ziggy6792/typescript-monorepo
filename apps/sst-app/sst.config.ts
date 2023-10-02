@@ -1,18 +1,22 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable prettier/prettier */
 import { SSTConfig } from 'sst';
+import { ApiStak } from './stacks/ApiStack';
+import { AuthStack } from './stacks/AuthStack';
+import { CdkApiStack } from './stacks/CdkApiStack';
 
-import path from 'path';
+import { NextApp } from './stacks/NextApp';
 
 export default {
   config(_input) {
     return {
-      name: 'ttx-ui',
+      name: 'tj-sst',
       region: 'ap-southeast-1',
       stage: 'dev',
     };
   },
   stacks(app) {
-    console.log('deploy');
+    // app.stack(AuthStack).stack(NextApp);
+    app.stack(CdkApiStack);
   },
 } satisfies SSTConfig;
