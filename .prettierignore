@@ -1,7 +1,6 @@
-dist/
-build/
-coverage/
-node_modules/
-*.gitkeep
-*.ico
-*.hbs
+node_modules
+
+**/generated
+**/dist
+**/coverage
+**/sst-env.d.ts
