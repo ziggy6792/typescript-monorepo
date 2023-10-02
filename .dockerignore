@@ -1,6 +1,7 @@
-./**/*.*
+./**.*
 ./**/node_modules
 ./node_modules
+./.yarn/**
 !./yarn.lock
 !./.yarnrc.yml
 !./.yarn/releases/**
@@ -9,6 +10,3 @@
 !./.npmrc
 !./package.json
 !./node_modules/.yarn-state.yml
-!/packages/*/package.json
-!/packages/*/dist/**
-!/packages/*/build/**

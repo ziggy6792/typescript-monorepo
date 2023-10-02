@@ -7,9 +7,6 @@ WORKDIR /asset
 
 COPY . /asset
 
-ENV NODE_ENV production
-
 RUN corepack enable
 
-RUN yarn workspaces focus @typescript-backend-cdk-starter/api --production
-
+# RUN yarn workspaces focus @typescript-backend-cdk-starter/api --production
