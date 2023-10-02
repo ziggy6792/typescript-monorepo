@@ -4564,7 +4564,7 @@ __metadata:
     tsconfig-paths: ^3.11.0
     tsconfig-paths-jest: ^0.0.1
     ttypescript: ^1.5.15
-    typescript: ^4.4.4
+    typescript: ^4.9.5
     typescript-transform-paths: ^2.0.0
   languageName: unknown
   linkType: soft
@@ -4636,7 +4636,7 @@ __metadata:
     superjson: ^1.13.1
     tar-fs: ^3.0.4
     tunnel-agent: ^0.6.0
-    typescript: ^5.1.6
+    typescript: ^4.9.5
     zod: ^3.21.4
   languageName: unknown
   linkType: soft
@@ -17580,7 +17580,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:5.2.2, typescript@npm:^4.6.4 || ^5.0.0, typescript@npm:^5.1.6, typescript@npm:^5.2.2":
+"typescript@npm:5.2.2, typescript@npm:^4.6.4 || ^5.0.0, typescript@npm:^5.2.2":
   version: 5.2.2
   resolution: "typescript@npm:5.2.2"
   bin:
@@ -17590,7 +17590,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^4.4.4, typescript@npm:^4.9.5":
+"typescript@npm:^4.9.5":
   version: 4.9.5
   resolution: "typescript@npm:4.9.5"
   bin:
@@ -17600,7 +17600,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@5.2.2#~builtin<compat/typescript>, typescript@patch:typescript@^4.6.4 || ^5.0.0#~builtin<compat/typescript>, typescript@patch:typescript@^5.1.6#~builtin<compat/typescript>, typescript@patch:typescript@^5.2.2#~builtin<compat/typescript>":
+"typescript@patch:typescript@5.2.2#~builtin<compat/typescript>, typescript@patch:typescript@^4.6.4 || ^5.0.0#~builtin<compat/typescript>, typescript@patch:typescript@^5.2.2#~builtin<compat/typescript>":
   version: 5.2.2
   resolution: "typescript@patch:typescript@npm%3A5.2.2#~builtin<compat/typescript>::version=5.2.2&hash=f3b441"
   bin:
@@ -17610,7 +17610,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^4.4.4#~builtin<compat/typescript>, typescript@patch:typescript@^4.9.5#~builtin<compat/typescript>":
+"typescript@patch:typescript@^4.9.5#~builtin<compat/typescript>":
   version: 4.9.5
   resolution: "typescript@patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=289587"
   bin:
