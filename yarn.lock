@@ -5919,7 +5919,7 @@ __metadata:
     aws-cdk-local: ^2.18.0
     aws-sdk: ^2.1430.0
     cdk-nextjs-standalone: ^4.0.0-beta.1
-    constructs: ^10.2.70
+    constructs: 10.2.69
     detect-libc: ^2.0.2
     esbuild: 0.17.16
     expand-template: ^2.0.3
@@ -8625,13 +8625,6 @@ __metadata:
   version: 10.2.69
   resolution: "constructs@npm:10.2.69"
   checksum: 8e72083abf8cc860abace9fd2a551a5eef30dc130cb5fabff30614329e977771e8e7a0bfd7a26784de42ae0a1904ffe4f16f765994a2f948b94787927da09436
-  languageName: node
-  linkType: hard
-
-"constructs@npm:^10.2.70":
-  version: 10.2.70
-  resolution: "constructs@npm:10.2.70"
-  checksum: 8649ed2c95cb0107d389249285229a2d6594cd36a24af2c106b25630cc4f649c2e628f237ce8da1f26454742ed23cc7f1fcfeab9c3a6592180a48848aa5bf82d
   languageName: node
   linkType: hard
 
