@@ -1,4 +1,5 @@
-import { NextApiRequest, NextApiResponse } from 'next';
+/* eslint-disable @typescript-eslint/require-await */
+import { type NextApiRequest, type NextApiResponse } from 'next';
 import { NextResponse } from 'next/server';
 
 const helloWorld = async (request: NextApiRequest, response: NextApiResponse): Promise<void> => {

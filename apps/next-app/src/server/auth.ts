@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unnecessary-type-assertion */
 import { type GetServerSidePropsContext } from 'next';
 import { getServerSession, type DefaultSession, type NextAuthOptions } from 'next-auth';
 import DiscordProvider from 'next-auth/providers/discord';
