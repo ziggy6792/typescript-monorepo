@@ -11,7 +11,7 @@ export function CdkApiStack({ stack }: StackContext) {
     memorySize: 256,
     timeout: cdk.Duration.seconds(30),
     runtime: lambda.Runtime.NODEJS_18_X,
-    handler: 'packages/lambda-api/dist/index.handler',
+    handler: 'apps/lambda-api/dist/index.handler',
     code: lambda.Code.fromDockerBuild(process.env.PROJECT_CWD!, {
       buildArgs: {
         PACKAGE_NAME: '@ts-monorepo/api',

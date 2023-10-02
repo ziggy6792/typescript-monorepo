@@ -10,7 +10,7 @@
     "validate:check": "turbo run validate:check",
     "test": "turbo run test",
     "test:coverage": "turbo run test:coverage",
-    "deploy": "turbo run deploy"
+    "sst:deploy": "turbo run deploy --filter @ts-monorepo/sst-app"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.7.1",
