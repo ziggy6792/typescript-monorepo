@@ -12,7 +12,11 @@ export function CdkApiStack({ stack }: StackContext) {
     timeout: cdk.Duration.seconds(30),
     runtime: lambda.Runtime.NODEJS_18_X,
     handler: 'packages/lambda-api/dist/index.handler',
-    code: lambda.Code.fromDockerBuild(process.env.PROJECT_CWD!, { buildArgs: {} }),
+    code: lambda.Code.fromDockerBuild(process.env.PROJECT_CWD!, {
+      buildArgs: {
+        PACKAGE_NAME: '@typescript-backend-cdk-starter/api',
+      },
+    }),
   });
 
   const api = new apiGateway.LambdaRestApi(stack, 'endpoint', {
