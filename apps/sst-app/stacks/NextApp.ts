@@ -2,8 +2,6 @@ import path from 'path';
 import { NextjsSite, StackContext, use } from 'sst/constructs';
 import { AuthStack } from './AuthStack';
 
-const _bla = 1;
-
 export function NextApp({ stack }: StackContext) {
   // Create auth provider
   const { auth } = use(AuthStack);
