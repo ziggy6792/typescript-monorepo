@@ -4500,7 +4500,6 @@ __metadata:
     ts-jest: 29.1.1
     ts-loader: ^9.4.4
     ts-node: ^10.9.1
-    tsconfig-paths: 4.2.0
     typescript: ^4.9.5
   languageName: unknown
   linkType: soft
@@ -4541,7 +4540,6 @@ __metadata:
     simple-get: ^4.0.1
     tar-fs: ^3.0.4
     ts-node: ^10.9.1
-    tsconfig-paths: ^4.2.0
     tunnel-agent: ^0.6.0
     typescript: ^4.9.5
   bin:
@@ -4588,7 +4586,6 @@ __metadata:
     npm-run-all: ^4.1.5
     source-map-support: ^0.5.21
     ts-node-dev: ^2.0.0
-    tsconfig-paths: ^4.2.0
     tslib: ^2.6.1
     typescript: ^4.9.5
     wait-port: ^1.0.4
@@ -17161,8 +17158,6 @@ __metadata:
     ts-jest: ^29.1.1
     ts-node: ^10.9.1
     tsconfig: "*"
-    tsconfig-paths: ^4.2.0
-    ttypescript: ^1.5.15
     turbo: ^1.10.14
     typescript: ^4.9.5
     typescript-transform-paths: ^3.4.6
@@ -17252,7 +17247,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tsconfig-paths@npm:4.2.0, tsconfig-paths@npm:^4.1.2, tsconfig-paths@npm:^4.2.0":
+"tsconfig-paths@npm:4.2.0, tsconfig-paths@npm:^4.1.2":
   version: 4.2.0
   resolution: "tsconfig-paths@npm:4.2.0"
   dependencies:

@@ -4,7 +4,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "deploy": "sst deploy --profile AWSAdministratorAccess-335003956095",
+    "deploy": "sst deploy",
     "lint": "eslint \"./**/*.ts\" --fix"
   },
   "dependencies": {

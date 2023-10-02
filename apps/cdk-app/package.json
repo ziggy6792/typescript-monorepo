@@ -52,7 +52,6 @@
     "simple-get": "^4.0.1",
     "tar-fs": "^3.0.4",
     "ts-node": "^10.9.1",
-    "tsconfig-paths": "^4.2.0",
     "tunnel-agent": "^0.6.0",
     "typescript": "^4.9.5"
   },
