@@ -152,3 +152,7 @@ dist
 **/.sst
 
 **/.DS_Store
+
+
+**/.env.local
+**/.env.production
