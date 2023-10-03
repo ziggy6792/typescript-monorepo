@@ -2,6 +2,13 @@
 
 This is an official starter Turborepo.
 
+## Getting started
+
+- `yarn install`
+- `yarn start` run locally for development
+- `yarn build` build packages
+- `yarn deploy` build and deploy with SST
+
 ## Using this example
 
 Run the following command:
@@ -16,11 +23,17 @@ This Turborepo includes the following packages/apps:
 
 ### Apps and Packages
 
-- `lambda-api`: a [Nest.js](https://nestjs.com/) app
+- `lambda-api`: a [Nest.js](https://nestjs.com/) hello world app
 - `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
 - `tsconfig`: `tsconfig.json`s used throughout the monorepo
+- `sst-app`: Deployment code
+- `cdk-app`: Deployment code (alternative)
 
 Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+
+### Utils
+
+- `local-lambda-server` runs `lambda-api` app on localhost:4000
 
 ### Utilities
 
