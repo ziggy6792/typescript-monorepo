@@ -6,6 +6,7 @@ import { AuthStack } from './stacks/AuthStack';
 import { ApiStack } from './stacks/ApiStack';
 
 import { NextApp } from './stacks/NextApp';
+import { ViteApp } from './stacks/ViteApp';
 
 export default {
   config(_input) {
@@ -17,6 +18,7 @@ export default {
   },
   stacks(app) {
     // app.stack(AuthStack).stack(NextApp);
-    app.stack(ApiStack);
+    // app.stack(ApiStack);
+    app.stack(ViteApp);
   },
 } satisfies SSTConfig;

@@ -5055,6 +5055,7 @@ __metadata:
   resolution: "@ts-monorepo/sst-app@workspace:apps/sst-app"
   dependencies:
     "@ts-monorepo/common": "workspace:^"
+    "@ts-monorepo/vite-app": "workspace:^"
     aws-cdk-lib: 2.91.0
     constructs: 10.2.69
     eslint: ^8.46.0
@@ -5062,7 +5063,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ts-monorepo/vite-app@workspace:apps/vite-app":
+"@ts-monorepo/vite-app@workspace:^, @ts-monorepo/vite-app@workspace:apps/vite-app":
   version: 0.0.0-use.local
   resolution: "@ts-monorepo/vite-app@workspace:apps/vite-app"
   dependencies:
