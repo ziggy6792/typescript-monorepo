@@ -20,7 +20,7 @@ export function ApiStack({ stack, app }: StackContext) {
     }),
   });
 
-  const api = new apiGateway.LambdaRestApi(stack, 'endpoint', {
+  const api = new apiGateway.LambdaRestApi(stack, getConstructName('api', app), {
     handler: apiLambda,
   });
 
