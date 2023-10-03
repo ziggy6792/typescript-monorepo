@@ -2,9 +2,8 @@
 /* eslint-disable prettier/prettier */
 import { SSTConfig } from 'sst';
 import { commonConfig } from '@ts-monorepo/common';
-import { ApiStak } from './stacks/ApiStack';
 import { AuthStack } from './stacks/AuthStack';
-import { CdkApiStack } from './stacks/CdkApiStack';
+import { ApiStack } from './stacks/ApiStack';
 
 import { NextApp } from './stacks/NextApp';
 
@@ -18,6 +17,6 @@ export default {
   },
   stacks(app) {
     app.stack(AuthStack).stack(NextApp);
-    // app.stack(CdkApiStack);
+    app.stack(ApiStack);
   },
 } satisfies SSTConfig;
