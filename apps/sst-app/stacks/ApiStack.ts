@@ -6,7 +6,7 @@ import { getConstructName } from '../utils/utility';
 export function ApiStack({ stack, app }: StackContext) {
   const functionName = 'lambda-api';
 
-  const apiLambda = new lambda.Function(stack, functionName, {
+  const apiLambda = new lambda.Function(stack, getConstructName(functionName, app), {
     functionName: getConstructName(functionName, app),
     description: getConstructName(functionName, app),
     memorySize: 256,

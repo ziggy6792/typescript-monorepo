@@ -21,14 +21,19 @@ npx create-turbo@latest
 
 This Turborepo includes the following packages/apps:
 
-### Apps and Packages
+### Apps
 
 - `lambda-api`: a [Nest.js](https://nestjs.com/) hello world app
-- `eslint-config-custom`: `eslint` conacfigurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
 - `sst-app`: [sst](https://sst.dev/) Deployment code deploys stack to AWS
 - `cdk-app`: [cdk](https://github.com/aws/aws-cdk) Deployment code (alternative) deploys stack to AWS
-- `@ts-journey/common`: Common code shared between packages
+- `vite-app`: [Vite.js](https://vitejs.dev/guide/) Fronend App runs on `http://localhost:5173/`
+- `next-app`: [Next.js](https://nextjs.org/) Fronend App runs on `http://localhost:3000/`
+
+### Packages
+
+- `common`: Common code shared between packages
+- `eslint-config-custom`: `eslint` conacfigurations (includes `eslint-config-next` and `eslint-config-prettier`)
+- `tsconfig`: `tsconfig.json`s used throughout the monorepo
 
 Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
 
@@ -36,7 +41,7 @@ Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
 
 - `local-lambda-server` runs `lambda-api` app on localhost:4000
 
-### Utilities
+###
 
 This Turborepo has some additional tools already setup for you:
 

@@ -10,8 +10,6 @@ export default function Home() {
 
   const session = useSession();
 
-  console.log('hello', hello.error);
-
   return (
     <>
       <Head>
@@ -36,9 +34,7 @@ export default function Home() {
           </div>
           <div className={styles.showcaseContainer}>
             <p className={styles.showcaseText}>{hello.data ? hello.data.greeting : 'Loading tRPC query...'}</p>
-            <p className={styles.showcaseText}>{'TRPC Error ' + hello.error?.message}</p>
             <p className={styles.showcaseText}>{'Session ' + JSON.stringify(session)}</p>
-
             <AuthShowcase />
           </div>
         </div>
