@@ -36,16 +36,6 @@ class DeploymentStack extends cdk.Stack {
 
     const stageName = 'dev';
 
-    console.log('ARGS!', {
-      functionName: utils.getConstructName(functionName, stageName),
-      description: utils.getConstructName(functionName, stageName),
-      memorySize: 256,
-      timeout: cdk.Duration.seconds(30),
-      runtime: lambda.Runtime.FROM_IMAGE,
-      handler: lambda.Handler.FROM_IMAGE,
-      code: lambda.Code.fromDockerBuild(process.env.PROJECT_CWD),
-    });
-
     const apiLambda = new lambda.Function(this, utils.getConstructId(functionName), {
       functionName: utils.getConstructName(functionName, stageName),
       description: utils.getConstructName(functionName, stageName),

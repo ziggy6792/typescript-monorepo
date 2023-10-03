@@ -1,9 +1,10 @@
+import { ssmParamUtils } from '@ts-monorepo/common';
 import { Cognito, StackContext } from 'sst/constructs';
 import { getConstructName } from '../utils/utility';
 
 export function AuthStack({ stack, app }: StackContext) {
-  const callbackUrls = ['http://localhost:3000/api/auth/callback/cognito'];
-  const logoutUrls = ['http://localhost:3000/api/auth/callback/cognito'];
+  const callbackUrls = ['http://localhost:3000/api/auth/callback/cognito', 'https://REPLACE_ME.cloudfront.net/api/auth/callback/cognito'];
+
   const auth = new Cognito(stack, 'Auth', {
     login: ['email'],
     cdk: {
@@ -11,7 +12,7 @@ export function AuthStack({ stack, app }: StackContext) {
         generateSecret: true,
         oAuth: {
           callbackUrls,
-          logoutUrls,
+          logoutUrls: callbackUrls,
         },
       },
     },
