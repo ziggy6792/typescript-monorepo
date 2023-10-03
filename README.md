@@ -7,7 +7,7 @@ This is an official starter Turborepo.
 - `yarn install`
 - `yarn start` run locally for development
 - `yarn build` build packages
-- `yarn deploy` build and deploy with SST
+- `yarn deploy` deploy with SST
 
 ## Using this example
 
@@ -24,10 +24,11 @@ This Turborepo includes the following packages/apps:
 ### Apps and Packages
 
 - `lambda-api`: a [Nest.js](https://nestjs.com/) hello world app
-- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
+- `eslint-config-custom`: `eslint` conacfigurations (includes `eslint-config-next` and `eslint-config-prettier`)
 - `tsconfig`: `tsconfig.json`s used throughout the monorepo
-- `sst-app`: Deployment code
-- `cdk-app`: Deployment code (alternative)
+- `sst-app`: [sst](https://sst.dev/) Deployment code deploys stack to AWS
+- `cdk-app`: [cdk](https://github.com/aws/aws-cdk) Deployment code (alternative) deploys stack to AWS
+- `@ts-journey/common`: Common code shared between packages
 
 Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
 
