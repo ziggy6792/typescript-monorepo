@@ -9,7 +9,6 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@ts-monorepo/common": "workspace:^",
     "aws-cdk-lib": "2.91.0",
     "constructs": "10.2.69",
     "sst": "2.24.20"
